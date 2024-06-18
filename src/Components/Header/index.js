@@ -1,7 +1,7 @@
 import React from "react";
 import $ from "jquery";
 import { buttonClose, dataTrigger } from "../../assets/js/custom";
-import logo from "../../assets/images/upCrops1.png";
+import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../../context/States/GlobalState";
 import { postResponse } from "../../services/API/CommonAPI";
@@ -55,8 +55,9 @@ export default function Header(props) {
     <header className="Header" id="myHeader">
       <nav className="navbar navbar-expand-lg ">
         <div className="container">
-          <Link to="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand flex align-items-center ">
             <img src={logo} className="img-fluid logoHeader" alt="Logo" />
+            <div className="text-center align-middle font-bold text-xl">AgriBuddy</div>
           </Link>
           <div className=" navbar-collapse">
             <ul className="navbar-nav ms-auto ">

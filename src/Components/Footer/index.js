@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { memo } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/upCorps.png";
+import logo from "../../assets/images/logo.png";
 
 import { GlobalContext } from "../../context/States/GlobalState";
 
@@ -18,12 +18,12 @@ function Footer() {
           <div className="row gy-5 ">
             <div className="col-xxl-6  col-md-6 col-12">
               <div className="CompanyInfo">
-                <div className="Footer_Logo">
+                <div className="Footer_Logo flex text-white align-items-center">
                   <img src={logo} className="img-fluid" alt="Logo" />
+                  <div className="font-bold text-xl">AgriBuddy</div>
                 </div>
                 <p className=" mt-20">
-                  upCrop is a leading global platform connecting Farmer and lab person workers
-                  worldwide.
+                  
                 </p>
               </div>
             </div>
@@ -62,9 +62,7 @@ function Footer() {
                       <i className="far fa-envelope"></i>
                       Email:
                     </span>
-                    <a href="mailto:contact@upCrop.com">
-                      contact@up-crops.com
-                    </a>
+                    <a href="mailto:info@agribuddy.com">info@agribuddy.com</a>
                   </li>
                   <li>
                     <span>
@@ -82,7 +80,7 @@ function Footer() {
       <div className="Copyright_Header">
         <div className="container">
           <span className="d-block text-center ">
-            Copyright © 2023 upCrops LTD. All Rights Reserved.
+            Copyright © 2024 AgriBuddy LTD. All Rights Reserved.
           </span>
         </div>
       </div>

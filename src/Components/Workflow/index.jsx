@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { getResponse, postResponse } from "../../services/API/CommonAPI";
 import { GlobalContext } from "../../context/States/GlobalState";
+import { Link, useHistory } from "react-router-dom";
+
 const ProductTable = () => {
   const [data, setData] = useState([]);
 
+  const history = useHistory();
   const getData = async () => {
     try {
       const data = await getResponse(`cart/getCart?status=PendAppr`);
@@ -51,7 +54,15 @@ const ProductTable = () => {
 
                     <td class="px-6 py-4 ">{value?.pid?.description}</td>
                     <td class="px-6 py-4">{value?.status}</td>
-                    <td class="px-6 py-4">Make Payment</td>
+                    <td class="px-6 py-4">
+                      <button
+                        onClick={() => {
+                          history.push(`/payment`, { state: value?._id });
+                        }}
+                      >
+                        Make Payment
+                      </button>
+                    </td>
                   </tr>
                 );
               })}

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import { postResponse } from "../../services/API/CommonAPI";
+import { postResponse, putResponse } from "../../services/API/CommonAPI";
 import { GlobalContext } from "../../context/States/GlobalState";
+import { useLocation } from "react-router-dom/cjs/react-router-dom";
 
 function Payment() {
+  const location = useLocation();
+  console.log("location", location?.state?.state);
   const [card, setCard] = useState({
     cardno: "",
     cardtype: "far fa-credit-card",
@@ -72,11 +75,16 @@ function Payment() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-6 sm:py-12 px-4 sm:px-0 flex justify-center items-center">
+    <div className="min-h-screen bg-gray-100 py-6 sm:py-12 px-4 sm:px-0 flex justify-center items-center mt-150">
       <div className="max-w-md w-full bg-white shadow-md rounded-lg p-4">
-        <h2 className="text-3xl font-semibold text-center mb-31">Payment Details</h2>
+        <h2 className="text-3xl font-semibold text-center mb-31">
+          Payment Details
+        </h2>
         <div className="mb-5">
-          <label htmlFor="cardno" className="block text-sm font-medium text-gray-700">
+          <label
+            htmlFor="cardno"
+            className="block text-sm font-medium text-gray-700"
+          >
             Card Number
           </label>
           <input
@@ -95,7 +103,10 @@ function Payment() {
         </div>
         <div className="grid grid-cols-2 gap-4 my-6">
           <div>
-            <label htmlFor="expirydt" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="expirydt"
+              className="block text-sm font-medium text-gray-700"
+            >
               Expiry Date
             </label>
             <input
@@ -108,7 +119,10 @@ function Payment() {
             />
           </div>
           <div>
-            <label htmlFor="cvv" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="cvv"
+              className="block text-sm font-medium text-gray-700"
+            >
               CVV
             </label>
             <input
@@ -145,7 +159,12 @@ function Payment() {
             };
 
             const response = await postResponse(`payment/addPayment`, data);
-            console.log("response", response);
+            const resultStatus = await putResponse(
+              `updateCart/${location?.state?.state}`,
+              {
+                status: "completed",
+              }
+            );
             window.location.href = "/ThankYou";
           }}
         >

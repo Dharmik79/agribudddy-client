@@ -83,6 +83,17 @@ export default function Header(props) {
                 </Link>
               </li>
             
+              <li className="nav-item">
+              <Link
+                to="/Workflow"
+                className={
+                  tab === "/Workflow" ? "nav-link active" : "nav-link"
+                }
+                onClick={() => setTab("/Workflow")}
+              >
+                Workflow
+              </Link>
+            </li>
               
               <li className="nav-item dropdown Profile">
                 {!login ? (

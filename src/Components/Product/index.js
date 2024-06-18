@@ -37,7 +37,6 @@ export default function ProductPage() {
     try {
       let { description, productId } = data;
 
-      console.log("data", Global?.login?.admin?._id);
       const response = await postResponse(`/cart/addCart`, {
         uid: Global?.login?.admin?._id,
         pid: productId,

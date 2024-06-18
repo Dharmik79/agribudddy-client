@@ -2,28 +2,17 @@ import React, { useEffect, useState } from "react";
 import { getResponse, postResponse } from "../../services/API/CommonAPI";
 import { GlobalContext } from "../../context/States/GlobalState";
 import Pagination from "../Pagination";
-
+import ModalWrapper from "../modalWrapper";
 export default function ProductPage() {
   const { Global } = React.useContext(GlobalContext);
-  const login = typeof Global.login == "string" ? JSON.parse(Global.login) : Global.login;
+  const login =
+    typeof Global.login == "string" ? JSON.parse(Global.login) : Global.login;
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState({});
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
-
-  const incrementCount = (id) => {
-    setCount((prevCount) => ({
-      ...prevCount,
-      [id]: (prevCount[id] || 0) + 1
-    }));
-  };
-
-  const decrementCount = (id) => {
-    setCount((prevCount) => ({
-      ...prevCount,
-      [id]: Math.max((prevCount[id] || 0) - 1, 0)
-    }));
-  };
-
+  const [openModal, setOpenModal] = useState(false);
+  const [currentData, setCurrentData] = useState(null);
+  const [desc, setDesc] = useState("");
   const getProducts = async () => {
     try {
       const data = await getResponse(`product/getProduct/`);
@@ -40,29 +29,40 @@ export default function ProductPage() {
   const toggleDescription = (id) => {
     setExpandedDescriptions((prevExpanded) => ({
       ...prevExpanded,
-      [id]: !prevExpanded[id]
+      [id]: !prevExpanded[id],
     }));
   };
 
-  const handleSubmit = async (productId) => {
-    const response = await postResponse(
-      `/cart/addCart`,
-      {
-        "uid": Global?.login?._id,
-        "product":[
-          {
-            "pid": productId,
-            "quantity": count[productId] || 1
-          }
-        ]
+  const onSubmit = async (data) => {
+    try {
+      let { description, productId } = data;
+
+      console.log("data", Global?.login?.admin?._id);
+      const response = await postResponse(`/cart/addCart`, {
+        uid: Global?.login?.admin?._id,
+        pid: productId,
+        description,
+      });
+
+      if (response.message != "") {
+        closeModal();
+      } else {
+        // Handle error
       }
-    );
-    if (response.status === "success") {
-      // Handle success
-    } else {
-      // Handle error
+      return response;
+    } catch (error) {
+      console.log("Error", error);
     }
-    return response;
+  };
+  const handleSubmit = async (productId) => {
+    setCurrentData(productId);
+    setOpenModal(true);
+  };
+
+  const closeModal = () => {
+    setOpenModal(false);
+    setDesc("");
+    setCurrentData(null);
   };
 
   return (
@@ -94,41 +94,60 @@ export default function ProductPage() {
                     </button>
                   )}
                 </p>
-                <div className="flex items-center justify-between my-3">
-                  <p className="text-gray-800 font-semibold text-xl">${product.price.toFixed(2)}</p>
-                  <div className="flex items-center">
-                    <button
-                      className="bg-slate-500 text-white font-semibold px-3 py-1 rounded-l focus:outline-none"
-                      onClick={() => decrementCount(product._id)}
-                    >
-                      -
-                    </button>
-                    <input
-                      type="number"
-                      min="0"
-                      value={count[product._id] || 0}
-                      onChange={(e) => setCount({ ...count, [product._id]: parseInt(e.target.value) })}
-                      className="form-input text-center w-10"
-                    />
-                    <button
-                      className="bg-slate-500 text-white font-semibold px-3 py-1 rounded-r focus:outline-none"
-                      onClick={() => incrementCount(product._id)}
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
+
                 <button
                   className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded focus:outline-none"
                   onClick={() => handleSubmit(product._id)}
                 >
-                  Add to Cart
+                  Send an Inquiry
                 </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+      <ModalWrapper
+        open={openModal}
+        setOpen={() => {
+          closeModal();
+        }}
+        title="Product Inquiry"
+        width="w-96"
+        onSubmit={() => {}}
+        falseFooter={false}
+        modalFooter={
+          <>
+            <button
+              className="outline-btn"
+              onClick={() => {
+                closeModal();
+              }}
+            >
+              Cancel
+            </button>
+
+            <button
+              className={"primary-btn"}
+              onClick={() => {
+                onSubmit({ description: desc, productId: currentData });
+              }}
+            >
+              Submit
+            </button>
+          </>
+        }
+      >
+        <textarea
+          type="text"
+          placeholder="Enter your name"
+     
+          name="description"
+          onChange={(e) => {
+            setDesc(e.target.value);
+          }}
+          className="w-full h-70 p-2 border border-gray-300 rounded mb-3"
+        />
+      </ModalWrapper>
     </section>
   );
 }

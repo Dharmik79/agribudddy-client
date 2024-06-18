@@ -82,32 +82,8 @@ export default function Header(props) {
                   Product
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  to="/Cart"
-                  className={
-                    tab == "/Cart" ? "nav-link active" : "nav-link"
-                  }
-                  onClick={() => setTab("/Cart")}
-                  tabIndex="-1"
-                  aria-disabled="true"
-                >
-                  Cart
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/ContactUS"
-                  className={
-                    tab == "/ContactUS" ? "nav-link active" : "nav-link"
-                  }
-                  onClick={() => setTab("/ContactUS")}
-                  tabIndex="-1"
-                  aria-disabled="true"
-                >
-                  Contact Us
-                </Link>
-              </li>
+            
+              
               <li className="nav-item dropdown Profile">
                 {!login ? (
                   <Link

@@ -1,7 +1,7 @@
 // POPPINS FONTS
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 // BEGIN:VARIABLE
-$blue: #87bdce;
+$blue: #F7AF24;
 $black: #1e1e1d;
 $gray: #7e7373;
 $white: #fff;
@@ -11,10 +11,29 @@ $lightgray: #f3f3f3;
   background-color: $blue;
 
 }
+
+.PrimaryButtons {
+  background-color: $blue;
+  padding: 8px 14px;
+  position: relative;
+  font-weight: 400;
+  transition: all 0.5s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  &:hover {
+    color: $white;
+    z-index: 9;
+    background-color: $black;
+  }
+}
+        
 .logoHeader{
-  width: 16% !important;
-  padding-left: 30px !important;
-  height: 16% !important;
+  width: 40% !important;
+  height: auto !important;
+  margin-left: 15% !important;
 }
 .blueColorText{
   color:$blue;
@@ -66,7 +85,6 @@ p {
 
 .btn-check:focus + .btn,
 .btn:focus {
-  -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 .dropdown-item.active,
@@ -106,14 +124,8 @@ $sides: (top, bottom, left, right);
 
   .Loader {
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
 
     .Circle {
@@ -146,24 +158,20 @@ $sides: (top, bottom, left, right);
 }
 @-webkit-keyframes rotation {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 @keyframes rotation {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -172,7 +180,6 @@ $sides: (top, bottom, left, right);
 // COMMON CSS
 
 .dropdown-menu {
-  -webkit-box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.12);
   box-shadow: 0 0 40px 0px rgba(0, 0, 0, 0.12);
   border: none;
 
@@ -203,8 +210,6 @@ $sides: (top, bottom, left, right);
   padding: 7px 25px;
   position: relative;
   font-weight: 400;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -236,8 +241,6 @@ $sides: (top, bottom, left, right);
     left: 0;
     bottom: 0;
     background-color: $black;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
     transition: all 0.5s;
     border-radius: 5px;
   }
@@ -283,8 +286,6 @@ $sides: (top, bottom, left, right);
   width: 100%;
   z-index: 999;
   position: relative;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   position: fixed;
   z-index: 9999;
@@ -297,8 +298,6 @@ $sides: (top, bottom, left, right);
     padding: 8px 14px;
     position: relative;
     font-weight: 400;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
     transition: all 0.5s;
     width: -moz-fit-content;
     width: -webkit-fit-content;
@@ -337,8 +336,6 @@ $sides: (top, bottom, left, right);
             bottom: 0;
             width: 0;
             height: 2px;
-            -webkit-transition: all 0.5s;
-            -o-transition: all 0.5s;
             transition: all 0.5s;
             background-color: $blue;
           }
@@ -366,8 +363,6 @@ $sides: (top, bottom, left, right);
           padding: 8px 14px;
           position: relative;
           font-weight: 400;
-          -webkit-transition: all 0.5s;
-          -o-transition: all 0.5s;
           transition: all 0.5s;
           width: -webkit-fit-content;
           width: -moz-fit-content;
@@ -386,16 +381,10 @@ $sides: (top, bottom, left, right);
       }
 
       .dropdown-menu {
-        -webkit-transform: translateY(25px);
-        -ms-transform: translateY(25px);
         transform: translateY(25px);
-        -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
 
         &.show {
-          -webkit-transform: translateY(13px);
-          -ms-transform: translateY(13px);
           transform: translateY(13px);
         }
       }
@@ -596,8 +585,6 @@ footer {
             position: relative;
             color: rgba($white, 0.5);
             font-size: 14px;
-            -webkit-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
             transition: all 0.5s ease;
 
             &::before {
@@ -606,8 +593,6 @@ footer {
               font-size: 12px;
               left: -18px;
               top: 50%;
-              -webkit-transform: translateY(-50%);
-              -ms-transform: translateY(-50%);
               transform: translateY(-50%);
               font-family: "Font Awesome 5 Free";
               font-weight: 900;
@@ -643,8 +628,6 @@ footer {
             padding-left: 27px;
             font-size: 16px;
             color: $white;
-            -webkit-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
             transition: all 0.5s ease;
             display: block;
             word-break: break-word;
@@ -666,8 +649,6 @@ footer {
           background-color: $blue;
           display: block;
           text-align: center;
-          -webkit-transition: all 0.5s ease;
-          -o-transition: all 0.5s ease;
           transition: all 0.5s ease;
           border-radius: 5px;
 
@@ -704,7 +685,6 @@ footer {
         color: $white;
         height: 45px;
         &:focus {
-          -webkit-box-shadow: none;
           box-shadow: none;
         }
       }
@@ -755,8 +735,6 @@ footer {
   .WorkProcess_Card {
     background-color: lighten($gray, 50%);
     padding: 25px;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     border: 2px dashed darken($blue, 15%);
     border-radius: 5px;
@@ -788,14 +766,8 @@ footer {
       height: 40px;
       width: 40px;
       background-color: darken($blue, 15%);
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
       margin-top: 20px;
       border-radius: 5px;
@@ -838,16 +810,15 @@ footer {
     background-color: #e6e4e4;
     padding: 30px 70px;
     margin-left: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-right: auto;
   }
   .FeatureJobList {
     background-color: $white;
     padding: 25px;
-    -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    -webkit-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
     box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
     height: 100%;
     border-radius: 5px;
@@ -886,13 +857,8 @@ footer {
     }
 
     .ImpList {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-      -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 
       li {
@@ -913,7 +879,6 @@ footer {
     }
 
     &:hover {
-      -webkit-box-shadow: 0px 15px 15px 0px rgba(114, 118, 116, 0.1);
       box-shadow: 0px 15px 15px 0px rgba(114, 118, 116, 0.1);
     }
   }
@@ -928,27 +893,18 @@ footer {
     border-radius: 5px;
     height: 100%;
     .Media {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       height: 100%;
       i.Icon {
         height: 50px;
-        -ms-flex-negative: 0;
         flex-shrink: 0;
         width: 50px;
         border-radius: 100%;
         background-color: lighten($blue, 20%);
         color: darken($blue, 15%);
         font-size: 24px;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
       }
 
@@ -971,17 +927,11 @@ footer {
         }
 
         a {
-          display: -webkit-box;
-          display: -ms-flexbox;
           display: flex;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
           align-items: center;
           margin-top: 5px;
           color: $white;
           font-weight: 500;
-          -webkit-transition: all 0.5s ease;
-          -o-transition: all 0.5s ease;
           transition: all 0.5s ease;
           position: relative;
           bottom: 55px;
@@ -1036,7 +986,6 @@ footer {
         color: darken($blue, 15%);
         width: 60px;
         height: 60px;
-        -ms-flex-negative: 0;
         flex-shrink: 0;
         text-align: center;
         line-height: 60px;
@@ -1090,7 +1039,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .form-check-input[type="checkbox"]:focus {
-  -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 // BEGIN: LOCATION SELECTION
@@ -1100,7 +1048,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-color: #ced4da;
 }
 .css-1pahdxg-control {
-  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   border-color: $blue !important;
 }
@@ -1115,10 +1062,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .select__control {
   border-color: #ced4da !important;
-  -webkit-box-shadow: none !important;
   box-shadow: none !important;
   &.select__control--menu-is-open {
-    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     border-color: $blue !important;
   }
@@ -1140,7 +1085,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   &_Outer {
-    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     padding: 50px;
     border-radius: 5px;
@@ -1151,8 +1095,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 500;
     font-size: 16px;
     color: $black;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 
     &:hover {
@@ -1189,7 +1131,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
       &:focus {
         border-bottom: 2px solid $blue;
-        -webkit-box-shadow: none;
         box-shadow: none;
         outline: none;
       }
@@ -1206,7 +1147,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   &_Outer {
-    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     // padding: 25px;
     border-radius: 5px;
@@ -1232,6 +1172,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       h2 {
         border-bottom: 1px dashed #383837;
         font-size: 24px !important;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
@@ -1281,6 +1223,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .check_center {
     margin-top: 15px !important;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-right: auto;
     margin-left: auto;
@@ -1310,19 +1254,11 @@ label {
   right: 20px;
   top: 20px;
   button {
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     // height: 30px;
     // width: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     background: #87bdce;
     color: #fff;
@@ -1346,7 +1282,6 @@ label {
 // END:FORM
 // BEGIN:MY PROFILE
 .Outer_Block {
-  -webkit-box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.08);
   background-color: $white;
   padding: 20px 30px;
@@ -1358,7 +1293,6 @@ label {
   .Candidate_Details {
     .Candidate_Des {
       padding: 30px 0;
-      -webkit-box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.08);
       box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.08);
       background-color: $white;
       border-radius: 5px;
@@ -1386,14 +1320,8 @@ label {
           padding: 4px;
 
           &[alt] {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
             align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
             justify-content: center;
           }
         }
@@ -1424,14 +1352,8 @@ label {
             width: 30px;
             background-color: $white;
             color: $gray;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
             align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
             justify-content: center;
           }
         }
@@ -1472,8 +1394,6 @@ label {
           padding: 10px 10px;
           border-left: 3px solid transparent;
           border-radius: 0;
-          display: -webkit-box;
-          display: -ms-flexbox;
           display: flex;
 
           i {
@@ -1500,14 +1420,8 @@ label {
   &_Header {
     border-bottom: 1px solid rgba($gray, 0.12);
     padding-bottom: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 
     h5 {
@@ -1542,8 +1456,6 @@ label {
     display: block;
     border-radius: 34px;
     background-color: #d8d8d8;
-    -webkit-transition: background-color 0.4s;
-    -o-transition: background-color 0.4s;
     transition: background-color 0.4s;
 
     &:before {
@@ -1555,8 +1467,6 @@ label {
       height: 12px;
       left: 4px;
       position: absolute;
-      -webkit-transition: 0.4s;
-      -o-transition: 0.4s;
       transition: 0.4s;
       width: 12px;
       border-radius: 100%;
@@ -1569,8 +1479,6 @@ label {
       content: "Public";
       color: #484848;
       padding-left: 18px;
-      -webkit-transition: all 0.4s;
-      -o-transition: all 0.4s;
       transition: all 0.4s;
     }
   }
@@ -1583,8 +1491,6 @@ label {
       background-color: $blue;
 
       &:before {
-        -webkit-transform: translateX(35px);
-        -ms-transform: translateX(35px);
         transform: translateX(35px);
       }
 
@@ -1628,7 +1534,6 @@ label {
     }
 
     .Aside_Inner {
-      -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07);
 
       .accordion {
@@ -1651,8 +1556,6 @@ label {
                   font-size: 15px;
                   content: "\f068";
                   font-weight: 900;
-                  -webkit-transform: rotate(0);
-                  -ms-transform: rotate(0);
                   transform: rotate(0);
                 }
               }
@@ -1666,7 +1569,6 @@ label {
               }
 
               &:focus {
-                -webkit-box-shadow: none;
                 box-shadow: none;
               }
             }
@@ -1738,19 +1640,14 @@ label {
 .Posted_Job_Card {
   background-color: $white;
   border: 1px dashed #87bdce;
-  -webkit-box-shadow: 0 0 20px #dddddd73;
   box-shadow: 0 0 20px #dddddd73;
   padding: 20px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   height: 100%;
   position: relative;
   border-radius: 5px;
 
   &:hover {
-    -webkit-transform: translateY(-8px);
-    -ms-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 
@@ -1760,10 +1657,7 @@ label {
   }
 
   .ImpList {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     max-height: 62px;
     overflow: hidden;
@@ -1798,7 +1692,6 @@ label {
     font-size: 15px;
     font-weight: normal;
     overflow: hidden;
-    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -1807,8 +1700,6 @@ label {
     color: $black;
     font-weight: 500;
     font-size: 14px;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 
     i {
@@ -1831,7 +1722,6 @@ label {
         color: darken($blue, 15%);
       }
       &:focus {
-        -webkit-box-shadow: none;
         box-shadow: none;
         background-color: transparent;
         color: $black;
@@ -1853,7 +1743,6 @@ label {
   .Basic_Info {
     background: #fff;
     padding: 25px 35px;
-    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     border-radius: 5px;
     border: 1px solid #e2e2e2;
@@ -1885,8 +1774,6 @@ label {
       font-weight: 400;
       &:hover {
         color: $blue;
-        -webkit-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
         transition: all 0.5s ease;
       }
     }
@@ -1905,8 +1792,6 @@ label {
       margin-top: 10px;
       font-size: 17px;
       color: $gray;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
       i {
         width: 20px;
@@ -1926,7 +1811,6 @@ label {
     background-color: $white;
     border: 1px dashed $blue;
     padding: 25px 35px;
-    -webkit-box-shadow: 0 0 20px #dddddd73;
     box-shadow: 0 0 20px #dddddd73;
     border-radius: 5px;
 
@@ -1985,14 +1869,8 @@ label {
     width: 50px;
     border-radius: 5px 0px 0px 5px;
     background-color: $blue;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     position: relative;
 
@@ -2015,12 +1893,9 @@ label {
 
 .Nurse_List {
   background-color: $white;
-  -webkit-box-shadow: 0 -2px 20px 0 rgba(0, 0, 0, 0.06);
   box-shadow: 0 -2px 20px 0 rgba(0, 0, 0, 0.06);
   padding: 18px;
   display: block;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   height: 100%;
   border-radius: 5px;
@@ -2071,7 +1946,6 @@ label {
   }
 
   .Skill_List {
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     height: 50px;
     overflow: hidden;
@@ -2103,14 +1977,8 @@ label {
     color: darken($blue, 15%);
     font-size: 15px;
     font-weight: 500;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 
     i {
@@ -2124,8 +1992,6 @@ label {
   }
 
   &:hover {
-    -webkit-box-shadow: 0 40px 44px 0 rgba(0, 0, 0, 0.05),
-      0 40px 44px 0 rgba(0, 0, 0, 0.05);
     box-shadow: 0 40px 44px 0 rgba(0, 0, 0, 0.05),
       0 40px 44px 0 rgba(0, 0, 0, 0.05);
   }
@@ -2134,14 +2000,8 @@ label {
   color: darken($blue, 15%);
   font-size: 15px;
   font-weight: 500;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   &:hover {
     color: $black;
@@ -2183,11 +2043,7 @@ label {
       span {
         color: $black;
         font-weight: 500;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
 
         i {
@@ -2219,27 +2075,12 @@ label {
   i {
     height: 35px;
     width: 35px;
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from($blue),
-      to($black)
-    );
-    background-image: -o-linear-gradient($blue, $black);
     background-image: linear-gradient($blue, $black);
     border-radius: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     color: $white;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
   }
 
@@ -2302,13 +2143,8 @@ label {
   overflow-y: auto !important;
 }
 .Skill_List {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 
   li {
@@ -2318,6 +2154,8 @@ label {
     background-color: rgba($blue, 0.12);
     color: darken($blue, 15%);
     font-weight: 600;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     font-size: 15px;
     margin-top: 15px;
@@ -2341,30 +2179,16 @@ label {
   height: 50px;
   display: block;
   text-decoration: none;
-  -webkit-border-radius: 35px;
-  -moz-border-radius: 35px;
   border-radius: 35px;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 
   i {
     color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     font-size: 19px;
     height: 100%;
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
 
@@ -2382,23 +2206,14 @@ label {
 // BEGIN:CHAT BOX
 /* chat_box */
 .chat_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   height: 500px;
   max-width: 420px;
   background-color: #f9fbff;
   opacity: 0;
-  -webkit-box-shadow: 1px 1px 100px 2px rgba(0, 0, 0, 0.22);
   box-shadow: 1px 1px 100px 2px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
-  -webkit-transition: all 0.2s ease-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   overflow: hidden;
   position: fixed;
@@ -2407,23 +2222,13 @@ label {
   z-index: 99;
 
   .head {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding: 10px 15px;
 
     .user {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
       flex-grow: 1;
 
       .avatar {
@@ -2445,22 +2250,14 @@ label {
     }
 
     .bar_tool {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
 
       i {
         padding: 5px;
         width: 30px;
         height: 30px;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
         color: darken($blue, 15%);
       }
@@ -2516,19 +2313,14 @@ label {
   }
 
   .foot {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 
     .msg {
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
       flex-grow: 1;
       background-color: $white !important;
       border: none;
 
       &:focus {
-        -webkit-box-shadow: none;
         box-shadow: none;
       }
     }
@@ -2550,13 +2342,11 @@ label {
 
 @-webkit-keyframes zoomIn {
   0% {
-    -webkit-transform: scale(0);
     transform: scale(0);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
@@ -2564,13 +2354,11 @@ label {
 
 @keyframes zoomIn {
   0% {
-    -webkit-transform: scale(0);
     transform: scale(0);
     opacity: 0;
   }
 
   100% {
-    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
@@ -2578,24 +2366,20 @@ label {
 
 @-webkit-keyframes bounce {
   50% {
-    -webkit-transform: translate(0, 5px);
     transform: translate(0, 5px);
   }
 
   100% {
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }
 
 @keyframes bounce {
   50% {
-    -webkit-transform: translate(0, 5px);
     transform: translate(0, 5px);
   }
 
   100% {
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }
@@ -2628,7 +2412,6 @@ label {
 .JobList_SearchBox {
   .JobList_SearchForm {
     background-color: $white;
-    -webkit-box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
     box-shadow: 0 0 1.25rem rgba(108, 118, 134, 0.1);
     padding: 7px;
     border-radius: 5px;
@@ -2639,8 +2422,6 @@ label {
         position: absolute;
         left: 15px;
         top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
 
         i {
@@ -2658,7 +2439,6 @@ label {
         border-radius: 5px;
 
         &:focus {
-          -webkit-box-shadow: 0 0 0 1px $blue;
           box-shadow: 0 0 0 1px $blue;
         }
       }
@@ -2667,7 +2447,6 @@ label {
 }
 
 .Single_Job_list_Card {
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
   background-color: $white;
   padding: 25px;
@@ -2697,7 +2476,6 @@ label {
   ul {
     height: 67px;
     overflow: hidden;
-    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
 
     li {
@@ -2720,8 +2498,6 @@ label {
   }
 
   .Job_Info {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     white-space: nowrap;
     justify-content: space-between;
@@ -2753,8 +2529,6 @@ label {
   color: $black;
   font-weight: 500;
   font-size: 18px;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   cursor: pointer;
   &:hover {
@@ -2763,8 +2537,6 @@ label {
 }
 
 .Upload_File {
-  -webkit-transition: background-color 160ms ease, border-color 400ms ease;
-  -o-transition: background-color 160ms ease, border-color 400ms ease;
   transition: background-color 160ms ease, border-color 400ms ease;
 
   [type="file"] {
@@ -2775,7 +2547,6 @@ label {
     margin: 15px auto 0;
 
     &:focus {
-      -webkit-box-shadow: none;
       box-shadow: none;
     }
   }
@@ -2793,7 +2564,6 @@ label {
     padding: 5px 20px;
     font-weight: 500;
     -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
     transition: all 1s ease;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -2867,22 +2637,15 @@ label {
     }
 
     .Holder {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
       background-color: $white;
-      -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.04);
       box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.04);
       padding: 25px;
       width: 80%;
       position: absolute;
       bottom: -68px;
       left: 50%;
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
       transform: translateX(-50%);
       border-radius: 5px;
       border: 1px solid #e2e2e2;
@@ -2906,17 +2669,14 @@ label {
   50%,
   80%,
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   40% {
-    -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
 
   60% {
-    -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }
@@ -2927,17 +2687,14 @@ label {
   50%,
   80%,
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
   40% {
-    -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
   }
 
   60% {
-    -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }
@@ -2963,8 +2720,6 @@ label {
 
     ul {
       li {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
 
         .Our_Contact_List_Icon {
@@ -3013,9 +2768,6 @@ label {
 
 .Chat_Web {
   .people-list {
-    -moz-transition: 0.5s;
-    -o-transition: 0.5s;
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     background-color: $white;
     border-radius: 5px;
@@ -3029,8 +2781,6 @@ label {
         position: absolute;
         right: 20px;
         top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         color: $gray;
       }
@@ -3040,7 +2790,6 @@ label {
         background-color: transparent !important;
         padding: 5px 50px 5px 15px;
         &:focus {
-          -webkit-box-shadow: none;
           box-shadow: none;
           border-color: $blue;
         }
@@ -3118,7 +2867,6 @@ label {
     background-color: $white;
     border-radius: 5px;
     border: 1px solid #e2e2e2;
-    -webkit-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
     box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
     height: 650px;
     .chat-header {
@@ -3212,7 +2960,6 @@ label {
             width: -moz-fit-content;
             width: fit-content;
             font-weight: 400;
-            -webkit-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
             box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
 
             &.my-message {
@@ -3223,11 +2970,7 @@ label {
             &.other-message {
               background-color: darken($blue, 20%);
               position: relative;
-              display: -webkit-box;
-              display: -ms-flexbox;
               display: flex;
-              -webkit-box-pack: end;
-              -ms-flex-pack: end;
               justify-content: flex-end;
               margin-left: auto;
               color: $white;
@@ -3253,7 +2996,6 @@ label {
             width: -moz-fit-content;
             width: fit-content;
             font-weight: 400;
-            -webkit-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
             box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
 
             &.my-message {
@@ -3264,11 +3006,7 @@ label {
             &.other-message {
               background-color: darken($blue, 20%);
               position: relative;
-              display: -webkit-box;
-              display: -ms-flexbox;
               display: flex;
-              -webkit-box-pack: end;
-              -ms-flex-pack: end;
               justify-content: flex-end;
               margin-left: auto;
               color: $white;
@@ -3323,7 +3061,6 @@ label {
               font-size: 12px;
               text-transform: uppercase;
               color: darken($blue, 15%);
-              -webkit-box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
               box-shadow: 0px 0px 30px 0 rgba(0, 20, 9, 0.1);
             }
           }
@@ -3339,7 +3076,6 @@ label {
           border-radius: 5px;
 
           &:focus {
-            -webkit-box-shadow: none;
             box-shadow: none;
             border-color: $blue;
           }
@@ -3437,7 +3173,6 @@ input[type="number"] {
   }
   .tab-content {
     background-color: $white;
-    -webkit-box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.08);
     box-shadow: 0 0 12px 0px rgba(0, 0, 0, 0.08);
     padding: 20px 30px;
     border-radius: 5px;
@@ -3476,8 +3211,6 @@ input[type="number"] {
         border-radius: 100%;
         left: -25px;
         top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
         transform: translateY(-50%);
       }
     }
@@ -3485,13 +3218,8 @@ input[type="number"] {
 }
 
 .skill_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -3501,39 +3229,23 @@ input[type="number"] {
 }
 
 .align_center_Bold {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   font-weight: 500;
   min-height: 350px;
   width: 100%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 .No_Data_Text {
   min-height: 150px;
 }
 .Space_Between_Footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .display_right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: right;
-  -ms-flex-pack: right;
   justify-content: right;
 }
 .Details {
@@ -3675,6 +3387,8 @@ input[type="number"] {
   background: #f3f3f3;
   border-left: 3px solid #100f0f;
   padding: 5px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 // .Terms_Condition_Content {
@@ -3847,18 +3561,12 @@ input[type="number"] {
     overflow-y: auto;
     visibility: hidden;
     background-color: $black;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 
     &.show {
       visibility: visible;
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
       transform: translateX(-100%);
       padding: 0;
-      -webkit-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
       transition: all 0.5s ease;
     }
 
@@ -3868,8 +3576,6 @@ input[type="number"] {
       }
 
       &.show {
-        -webkit-transform: translateY(0) !important;
-        -ms-transform: translateY(0) !important;
         transform: translateY(0) !important;
       }
     }
@@ -3886,8 +3592,6 @@ input[type="number"] {
   }
 
   .navbar-nav {
-    -webkit-box-align: start !important;
-    -ms-flex-align: start !important;
     align-items: flex-start !important;
 
     li.nav-item {
@@ -3916,7 +3620,6 @@ input[type="number"] {
 
     .dropdown-menu {
       background-color: $black;
-      -webkit-box-shadow: none;
       box-shadow: none;
 
       li {
@@ -3985,9 +3688,6 @@ input[type="number"] {
   }
   .Our_Contact {
     li {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
       flex-direction: column;
 
       .Our_Contact_List_Icon {
@@ -4009,9 +3709,6 @@ input[type="number"] {
 
   .Holder {
     width: 100% !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     position: inherit !important;
     bottom: inherit !important;
@@ -4060,12 +3757,7 @@ input[type="number"] {
   }
 
   .Form_Block_Header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
 
     .CommonButton {
@@ -4123,12 +3815,7 @@ input[type="number"] {
   }
 
   .JobDtl {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start !important;
-    -ms-flex-align: start !important;
     align-items: flex-start !important;
   }
 
@@ -4146,9 +3833,6 @@ input[type="number"] {
         padding: 20px !important;
 
         .WhyChooseUs_Content_Card {
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
           flex-direction: column;
 
           .WhyChooseUs_Content_Card_Info {
@@ -4228,6 +3912,7 @@ img {
 }
 
 .Link_Style {
+  width: -webkit-fit-content;
   width: fit-content;
   width: -moz-fit-content;
   color: #519fb8;
@@ -4286,12 +3971,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .Attachment_Text {
       padding: 5px 10px;
       background-color: rgb(216, 216, 216);
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
       border-radius: 5px;
       font-size: 12px;
       position: relative;
       &:after {
-        clip-path: polygon(50% 100%, 0 0, 100% 0);
+        -webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+                clip-path: polygon(50% 100%, 0 0, 100% 0);
         position: absolute;
         bottom: -8px;
         left: 10px;

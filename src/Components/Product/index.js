@@ -67,18 +67,18 @@ export default function ProductPage() {
   return (
     <section className="py-12 my-12 bg-gray-100">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto gap-8">
           {products.map((product) => (
             <div
               key={product._id}
-              className="rounded-lg overflow-hidden shadow-md bg-white transition duration-300 ease-in-out transform hover:scale-105"
+              className="flex flex-col rounded-lg overflow-hidden shadow-md bg-white transition duration-300 ease-in-out transform hover:scale-105"
             >
               <img
                 src="https://media.istockphoto.com/id/1463452333/photo/smart-farming-holding-young-plant-smart-farming-and-precision-agriculture-4-0-agriculture.webp?b=1&s=170667a&w=0&k=20&c=pinmWkLr7rWrZasDdYH8260l76h-og0PtLxZ3b-Yxe0="
                 alt="product"
                 className="w-full h-64 object-cover object-center rounded-t-lg"
               />
-              <div className="p-4">
+              <div className="p-4 flex-grow">
                 <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                 <p className="text-gray-700 mb-4">
                   {expandedDescriptions[product._id]
@@ -86,16 +86,17 @@ export default function ProductPage() {
                     : `${product.description.slice(0, 100)}...`}
                   {!expandedDescriptions[product._id] && (
                     <button
-                      className="text-blue-500 hover:text-blue-600 font-semibold focus:outline-none"
+                      className="text-[#F7AF24] hover:text-[#F7AF20] font-semibold focus:outline-none"
                       onClick={() => toggleDescription(product._id)}
                     >
                       View More
                     </button>
                   )}
                 </p>
-
+              </div>
+              <div className="px-4 pb-24">
                 <button
-                  className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded focus:outline-none"
+                  className="w-full PrimaryButtons text-white font-semibold py-2 rounded focus:outline-none"
                   onClick={() => handleSubmit(product._id)}
                 >
                   Send an Inquiry
@@ -110,8 +111,7 @@ export default function ProductPage() {
         setOpen={() => {
           closeModal();
         }}
-        title="Product Inquiry"
-        width="w-96"
+        width="max-w-6xl"
         onSubmit={() => {}}
         falseFooter={false}
         modalFooter={
@@ -126,7 +126,7 @@ export default function ProductPage() {
             </button>
 
             <button
-              className={"primary-btn"}
+              className={"PrimaryButtons"}
               onClick={() => {
                 onSubmit({ description: desc, productId: currentData });
               }}
@@ -138,8 +138,7 @@ export default function ProductPage() {
       >
         <textarea
           type="text"
-          placeholder="Enter your name"
-     
+          placeholder="Enter your description here..."
           name="description"
           onChange={(e) => {
             setDesc(e.target.value);

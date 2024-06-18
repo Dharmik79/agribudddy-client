@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { memo } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/whiteLogo.png";
 
 import { GlobalContext } from "../../context/States/GlobalState";
 
@@ -19,12 +19,9 @@ function Footer() {
             <div className="col-xxl-6  col-md-6 col-12">
               <div className="CompanyInfo">
                 <div className="Footer_Logo flex text-white align-items-center">
-                  <img src={logo} className="img-fluid" alt="Logo" />
-                  <div className="font-bold text-xl">AgriBuddy</div>
+                  <img src={logo} className="img-fluid ml-18" alt="Logo" />
                 </div>
-                <p className=" mt-20">
-                  
-                </p>
+                <p className=" mt-20"></p>
               </div>
             </div>
             <div className="col-xxl-3  col-md-3 col-12 d-flex flex-column align-items-center">
@@ -34,8 +31,6 @@ function Footer() {
                   <li>
                     <Link to="/Products">Products</Link>
                   </li>
-                 
-                 
                 </ul>
               </div>
             </div>
@@ -73,7 +68,7 @@ function Footer() {
       <div className="Copyright_Header">
         <div className="container">
           <span className="d-block text-center ">
-            Copyright © 2024 AgriBuddy LTD. All Rights Reserved.
+            Copyright © 2024 AgriBuddy
           </span>
         </div>
       </div>

@@ -57,7 +57,6 @@ export default function Header(props) {
         <div className="container">
           <Link to="/" className="navbar-brand flex align-items-center ">
             <img src={logo} className="img-fluid logoHeader" alt="Logo" />
-            <div className="text-center align-middle font-bold text-xl">AgriBuddy</div>
           </Link>
           <div className=" navbar-collapse">
             <ul className="navbar-nav ms-auto ">

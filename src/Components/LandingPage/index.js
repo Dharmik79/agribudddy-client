@@ -38,7 +38,7 @@ const LandingPage = () => {
             <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="bg-gray-100 p-6 rounded-lg">
                 <Link
-                  to="/membership"
+                  to="/Products"
                   className="LoginButton"
                   tabIndex="-1"
                   aria-disabled="true"
@@ -61,7 +61,7 @@ const LandingPage = () => {
             <div className="xl:w-1/3 md:w-1/2 p-4">
               <div className="bg-gray-100 p-6 rounded-lg">
                 <Link
-                  to="/SoilTesting"
+                  to="/Products"
                   className="LoginButton"
                   tabIndex="-1"
                   aria-disabled="true"

@@ -75,7 +75,7 @@ function Payment() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-6 sm:py-12 px-4 sm:px-0 flex justify-center items-center mt-150">
+    <div className="min-h-screen bg-gray-100 py-6 sm:py-12 px-4 sm:px-0 flex justify-center items-center mt-80">
       <div className="max-w-md w-full bg-white shadow-md rounded-lg p-4">
         <h2 className="text-3xl font-semibold text-center mb-31">
           Payment Details
@@ -145,7 +145,7 @@ function Payment() {
           </div>
         </div>
         <button
-          className="btn-primary w-full py-2 rounded-md text-white bg-slate-800 font-semibold focus:outline-none"
+          className="PrimaryButtons w-full py-2 rounded-md text-white font-semibold focus:outline-none"
           onClick={async () => {
             let [month, year] = card.expirydt.split("/");
             const result = card.cardno.replace(/[-\s]/g, "");

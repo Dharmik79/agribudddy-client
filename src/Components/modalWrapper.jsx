@@ -43,19 +43,6 @@ const ModalWrapper = ({
               <Dialog.Panel
                 className={`relative w-full overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:w-full ${width}`}
               >
-                <div className="flex items-center justify-between h-16 gap-3 px-5 bg-primary text-white">
-                  <h3 className="text-lg font-semibold">{title}</h3>
-                  <div className="flex">
-                    <button
-                      type="button"
-                      className="flex items-center justify-center w-8 h-8 transition hover:rotate-90 !outline-none"
-                      onClick={setOpen}
-                    >
-                      <span className="sr-only">Close panel</span>
-                      <CloseIcon />
-                    </button>
-                  </div>
-                </div>
                 <div className={`p-5  overflow-auto ${childrenClass}`}>
                   {children}
                 </div>
